@@ -1,0 +1,37 @@
+body {
+    background-color:#f4f4f4;
+    font-family: Arial,sans-serif;
+    color: #000;
+}
+#main-container{
+    width:380px;
+    margin:40px auto;
+    background-color: #fff;
+    padding:20px;
+    border:1px solid #000;
+}
+#title {
+    color: #1a73e8;
+    text-align:center;
+    border-bottom:2px solid #1a73e8;
+}
+fieldset {
+    border:1px solid#333;
+}
+input[type="text"],input[type="number"] 
+{
+    width:100%;
+    padding:8px;
+    margin:5px 0;
+    border:1px solid #000;
+    box-sizing:border-box;
+}
+input[readonly] 
+{
+    background-color:#e0e0e0;
+    color:#000;
+}
+#msg {
+    font-weight:bold;
+    margin-top:10px;
+}

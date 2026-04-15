@@ -1,0 +1,49 @@
+<html lang="en">
+    <head>
+        <title>js example</title>
+    </head>
+    <body>
+        <h1>js example</h1>
+        <script>
+            name="nakib"; //variable declare
+            var name="nakib";
+            let name="nakib";//*recomend lock specific (for lop e let keyword rakhlke oikhena atkai jabe es6)
+            const name="nakib";
+
+            let std=[1,'nakib,2.5'];//index array(array define)
+
+            //conditional statement
+            if(1 == "1")//doita pasa pasi compare korbe
+        {
+
+        }else{
+
+        }//reasult true if(=== then identical and naswe is fallse)
+
+
+        //function
+        function sum(a,b){
+            return a+b;
+        }
+        let sum = function(a,b)// uporer and eita same output
+        {
+            return a+b;
+        }
+        //sum(10,20)
+
+
+        function test(a,b)//let function r value bosai dibo eitate
+        {
+             let c = a(10,20)+b;//call back function
+             return c;   //answer 50
+        }
+
+
+        //another method is:
+        test(function(a,b){
+            return a+b;
+        },20);// same output and same equation ans 50 a(b+d) here a is valuless
+        
+        </script>
+    </body>
+</html>

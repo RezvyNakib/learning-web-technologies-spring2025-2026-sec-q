@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <title>Product Management</title>
+    <link rel="stylesheet" href="product_style.css"/>
+</head>
+<body>
+    <div id="main-container">
+        <h1 id="title">Product Management</h1>
+        <form>
+            <fieldset>
+                <legend>Order Details</legend>
+                <table border="0"width="100%">
+                    <tr>
+                        <td>Unit Price</td>
+                        <td><input type="text"id="unitPrice"value="1000"readonly /></td>
+                    </tr>
+                    <tr>
+                        <td>Quantity</td>
+                        <td><input type="number"name="qty"id="qtyInput"placeholder="Enter quantity" /></td>
+                    </tr>
+                    <tr>
+                        <td>Total Price</td>
+                        <td><input type="text"id="totalPrice"value="0"readonly /></td>
+                    </tr>
+                </table>
+                <p id="msg"></p>
+            </fieldset>
+        </form>
+    </div>
+    <script src="product_script.js"></script>
+</body>
+</html>

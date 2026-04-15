@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Marks Entry</title>
+</head>
+<body>
+    <h3>Add Student Information</h3>
+    Name: <input type="text" id="studentName"><br><br>
+    Marks: <input type="number" id="studentMarks"><br><br>
+    <button onclick="addStudent()">Submit</button>
+
+    <hr>
+    <table border="1" id="studentTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Marks</th>
+            </tr>
+        </thead>
+        <tbody>
+            </tbody>
+    </table>
+
+    <script>
+        function addStudent() {
+            const name = document.getElementById("studentName").value;
+            const marks = document.getElementById("studentMarks").value;
+            const tableBody = document.getElementById("studentTable").getElementsByTagName('tbody')[0];
+
+            // ১. ভ্যালিডেশন: নাম খালি হতে পারবে না এবং শুধু অক্ষর হতে হবে
+            const namePattern = /^[A-Za-z]+$/;
+            if (name === "" || !namePattern.test(name)) {
+                alert("Please enter a valid name (letters only).");
+                return;
+            }
+
+            // ২. ভ্যালিডেশন: মার্কস ০ থেকে ১০০-এর মধ্যে হতে হবে
+            const marksNum = parseFloat(marks);
+            if (isNaN(marksNum) || marksNum < 0 || marksNum > 100) {
+                alert("Please enter marks between 0 and 100.");
+                return;
+            }
+
+            // ৩. ডাইনামিকভাবে রো যোগ করা
+            const newRow = tableBody.insertRow();
+            const cell1 = newRow.insertCell(0);
+            const cell2 = newRow.insertCell(1);
+
+            cell1.innerHTML = name;
+            cell2.innerHTML = marksNum;
+
+            // ৪. মার্কস অনুযায়ী ব্যাকগ্রাউন্ড কালার পরিবর্তন
+            if (marksNum > 50) {
+                newRow.style.backgroundColor = "green";
+            } else {
+                newRow.style.backgroundColor = "red";
+            }
+
+            // ইনপুট ফিল্ড খালি করে দেওয়া
+            document.getElementById("studentName").value = "";
+            document.getElementById("studentMarks").value = "";
+        }
+    </script>
+</body>
+</html>
